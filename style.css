@@ -1,0 +1,112 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    background: url(./pexels-daniel-putzer-633409.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 15px;
+    border-bottom: 2px solid white;
+    border-radius: 14px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    color: white;
+    cursor: pointer;
+
+}
+
+.error {
+    color: red;
+}
+
+table {
+    background: rgba(70, 69, 69, 0.349);
+    color: white;
+    border-collapse: collapse;
+    width: 95%;
+    align-items: center;
+    margin: auto;
+    letter-spacing: 2px;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr {
+    border-bottom: 1px solid rgb(131, 127, 127);
+}
+
+tr:hover {
+    background-color: rgba(94, 93, 93, 0.226) !important;
+}
+
+/* tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.233);
+} */
+
+#form {
+    background: rgba(255, 255, 255, 0.068);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30%;
+    gap: 5px;
+    border: 2px solid rgb(134, 130, 130);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+input,
+select {
+    background: rgba(0, 0, 0, 0.411);
+    color: white;
+    border-radius: 5px;
+}
+
+input,
+select,
+button {
+    height: 30px;
+    border-radius: 10px;
+}
+
+th {
+    background-color: rgb(255, 166, 0);
+    color: black;
+}
+
+
+#editTask {
+    color: black;
+    /* background: orange; */
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    /* display: none; */
+    transform: scale(0.1);
+}
+
+#editTask button {
+    width: 90px;
+    background: orange;
+    /* transform: scale(1); */
+
+}

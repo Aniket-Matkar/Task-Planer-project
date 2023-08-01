@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Task Planner</li>
+        </ul>
+    </nav>
+
+    <div id="currentDateContainer">
+        <label for="currentDate">Today's Date:</label>
+        <input type="text" id="currentDate" readonly>
+    </div>
+
+
+    <div id="taskForm">
+        <div id="error" class="error"></div>
+        <label for="task">Task</label>
+        <input type="text" name="task" id="task" required>
+        <button>Add Task</button>
+    </div>
+
+    <div id="subTaskForm">
+        <label class="vanish" for="subtasks">Subtask</label>
+        <input type="text" name="subtask" id="subtask" required>
+
+        <label class="vanish" for="startDate">Start Date</label>
+        <input id="startDate" type="date" required>
+
+        <label class="vanish" for="endDate">End Date</label>
+        <input id="endDate" type="date" required>
+
+        <label class="vanish" for="status">Status</label>
+        <select id="status" name="status" required>
+            <option value="selectStatus">Select Status</option>
+            <option value="Completed" id="completedOption">Completed</option>
+            <option value="Work In Progress" id="workInProgressOption">Work In Progress</option>
+            <option value="Cancelled" id="cancelledOption">Cancelled</option>
+            <option value="Due Passed" id="duePassedOption">Due Passed</option>
+        </select>
+        <button id="add" onclick="addWholeTask()">Add Subtask</button>
+    </div>
+
+
+    <div id="editTask">
+        <div id="error2" class="error"></div>
+        <label for="task">Task</label>
+        <input type="text" name="task" id="task1" required>
+
+        <button id="editTask" onclick="saveEditedTask()">Edit Task</button>
+
+    </div>
+    
+    <!-- <input type="text" id="search1" onkeyup="searchTask()" placeholder="Search for Tasks.."> -->
+    <!-- <table id="taskTable" border="10">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableTaskSection">
+            Rows for tasks will be added here
+        </tbody>
+    </table>
+
+    <input type="text" id="search2" onkeyup="searchSubtasks()" placeholder="Search for Subtasks..">
+    <table id="subtaskTable" border="10">
+        <thead>
+            <tr>
+                <th>Subtask</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableSubtaskSection">
+            Rows for subtasks will be added here
+        </tbody>
+    </table> -->
+
+
+    <!-- <input type="text" id="search2" onkeyup="searchSubtasks()" placeholder="Search for Subtasks.."> -->
+
+    <input style="margin: 2rem;" type="text" id="search1" onkeyup="searchTask()" placeholder="Search for Tasks name..">
+    <table id="table">
+        <!-- <thead>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="tableTaskSection"></tbody>
+        </thead>
+        <tr>
+            <th>Subtasks</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr> -->
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+
+    <script src="index.js"></script>
+    <script src="searchFilters.js"></script>
+    <script src="currentDate.js"></script>
+    <script src="dateValidations.js"></script>
+    <script src="editTask.js"></script>
+    <script src="deleteTask.js"></script>
+</body>
+
+</html>
